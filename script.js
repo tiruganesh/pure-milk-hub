@@ -11,13 +11,13 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     \nDelivery Address: ${address}`;
 
     // Your WhatsApp number
-    const phoneNumber = "919121556689"; // Replace with your actual WhatsApp number
+    const phoneNumber = "9121556689"; // Replace with your actual WhatsApp number
 
     // Encode the message to be URL-safe
     const encodedMessage = encodeURIComponent(message);
 
     // Create WhatsApp link
-    const whatsappLink = 'https://wa.me/${9121556689}?text=${encodedMessage}';
+    const whatsappLink = 'https://wa.me/9121556689 ?text=${encodedMessage}';
 
     // Open WhatsApp
     window.open(whatsappLink, "_blank");
