@@ -17,7 +17,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     const encodedMessage = encodeURIComponent(message);
 
     // Create WhatsApp link
-    const whatsappLink = 'https://wa.me/${phoneNumber}?text=${encodedMessage}';
+    const whatsappLink = 'https://wa.me/${9121556689}?text=${encodedMessage}';
 
     // Open WhatsApp
     window.open(whatsappLink, "_blank");
