@@ -9,6 +9,14 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     const message = `Hello, I want to order ${quantity} liters of milk. 
     \nName: ${name} 
     \nDelivery Address: ${address}`;
+    const name = document.getElementById('name').value;
+    const quantity = document.getElementById('quantity').value;
+    const address = document.getElementById('address').value;
+
+    // WhatsApp message content
+    const message = `Hello, I want to order ${quantity} kgs of curd. 
+    \nName: ${name} 
+    \nDelivery Address: ${address}`;
 
     // Your WhatsApp number
     const phoneNumber = "9121556689"; // Replace with your actual WhatsApp number
