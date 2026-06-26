@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
 
     <!-- Navigation -->
     <nav>
+
         <div class="nav-left">
             <img src="logo.jpg" alt="PureMilkHub Logo" class="logo">
         </div>
@@ -23,16 +25,23 @@
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
         </div>
+
     </nav>
 
-    <!-- Website Title -->
-    <div class="hero">
-        <h1>🥛 Satya Ganga Dairy Milk</h1>
-        <p>Fresh Milk & Fresh Pot Curd Delivered to Your Doorstep</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
 
-    <!-- Milk Order Form -->
-    <div class="container">
+        <h1>🥛 Satya Ganga Dairy Milk</h1>
+
+        <p>
+            Fresh Milk & Fresh Pot Curd Delivered to Your Doorstep
+        </p>
+
+    </section>
+
+    <!-- Milk Order -->
+    <section class="container">
+
         <h2>Order Fresh Milk</h2>
 
         <form id="milkOrderForm">
@@ -53,6 +62,7 @@
                 required>
 
             <label for="milk-address">Delivery Address</label>
+
             <textarea
                 id="milk-address"
                 rows="4"
@@ -67,16 +77,17 @@
 
         <p id="milk-message"></p>
 
-    </div>
+    </section>
 
-    <!-- Curd Order Form -->
-    <div class="container">
+    <!-- Curd Order -->
+    <section class="container">
 
         <h2>Order Fresh Pot Curd</h2>
 
         <form id="curdOrderForm">
 
             <label for="curd-name">Customer Name</label>
+
             <input
                 type="text"
                 id="curd-name"
@@ -84,6 +95,7 @@
                 required>
 
             <label for="curd-quantity">Quantity (Kg)</label>
+
             <input
                 type="number"
                 id="curd-quantity"
@@ -92,6 +104,7 @@
                 required>
 
             <label for="curd-address">Delivery Address</label>
+
             <textarea
                 id="curd-address"
                 rows="4"
@@ -106,9 +119,10 @@
 
         <p id="curd-message"></p>
 
-    </div>
+    </section>
 
     <script src="script.js"></script>
 
 </body>
 </html>
+```
