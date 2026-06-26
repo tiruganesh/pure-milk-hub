@@ -116,13 +116,11 @@ img{
 }
 
 .hero p{
-
     color:white;
     font-size:24px;
-
-    max-width:750px;
-
-    margin-bottom:35px;
+    max-width:900px;
+    margin:20px auto 35px;
+    text-align:center;
 }
 
 .hero .btn{
