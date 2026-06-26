@@ -1,11 +1,11 @@
-/* ===========================
-   Google Font
-=========================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ==========================================
+   SATYA GANGA DAIRY - PROFESSIONAL CSS
+========================================== */
 
-/* ===========================
-   Reset
-=========================== */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
 
 *{
     margin:0;
@@ -18,347 +18,619 @@ body{
     font-family:'Poppins',sans-serif;
     background:#f8f9fa;
     overflow-x:hidden;
+    line-height:1.6;
 }
 
-/* ===========================
-   Navbar
-=========================== */
+/* Remove underline */
 
-/* Navbar */
+a{
+    text-decoration:none;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
 .navbar{
-    background:rgba(0,0,0,0.18)!important;
-    backdrop-filter:blur(8px);
-    padding:8px 0;
-}
-
-/* Navigation Container */
-.navbar .container{
-    background:rgba(255,255,255,0.12);
+    background:rgba(0,0,0,.25)!important;
     backdrop-filter:blur(12px);
-    border-radius:18px;
-    padding:8px 25px;
-    max-width:1100px;
+    padding:10px 0;
+    transition:.4s;
 }
 
-/* Logo */
+.navbar .container{
+    max-width:1200px;
+}
+
 .logo{
-    width:60px;
-    height:60px;
-    border-radius:12px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
-/* Brand */
 .navbar-brand{
-    font-size:28px;
+    font-size:26px;
     font-weight:700;
     color:#fff!important;
 }
 
-/* Navigation Links */
+.navbar-nav{
+    gap:12px;
+}
+
 .nav-link{
     color:#fff!important;
-    font-size:18px;
-    margin-left:15px;
+    font-size:17px;
+    font-weight:500;
+    padding:10px 18px!important;
+    border-radius:30px;
     transition:.3s;
 }
 
 .nav-link:hover{
-    color:#ffd700!important;
+    background:#198754;
+    color:#fff!important;
 }
 
-/* ===========================
-   Hero Section
-=========================== */
+/* ==========================================
+   HERO SECTION
+========================================== */
 
 .hero{
     height:100vh;
     background:url("background.jpg") center center/cover no-repeat;
     position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
 .overlay{
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.55);
+    background:rgba(0,0,0,.45);
+
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+    padding:20px;
 }
 
 .hero h1{
+
     color:white;
-    font-size:4rem;
-    font-weight:700;
+    font-size:64px;
+    font-weight:800;
+
+    margin-bottom:15px;
 }
 
 .hero p{
+
     color:white;
-    font-size:1.3rem;
-    margin-top:15px;
+    font-size:24px;
+
+    max-width:750px;
+
+    margin-bottom:35px;
 }
 
 .hero .btn{
-    margin-top:20px;
+
+    padding:14px 34px;
     border-radius:40px;
-    padding:12px 30px;
+
     font-size:18px;
+    font-weight:600;
+
     transition:.3s;
 }
 
 .hero .btn:hover{
-    transform:translateY(-3px);
-}
 
-/* ===========================
-   Section Title
-=========================== */
+    transform:translateY(-4px);
 
-section h2{
-    font-size:2.5rem;
-    font-weight:700;
-    color:#198754;
-    margin-bottom:40px;
 }
-/* ===========================
-   Products Section
-=========================== */
+/* ==========================================
+   PRODUCTS SECTION
+========================================== */
 
 #products{
-    padding:80px 0;
+    padding:90px 0;
     background:#f8f9fa;
 }
 
+#products h2{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#198754;
+    margin-bottom:60px;
+}
+
 .card{
+
     border:none;
     border-radius:20px;
     overflow:hidden;
+
     transition:.4s;
-}
 
-.card img{
-    height:250px;
-    object-fit:cover;
-}
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
-}
-
-.card-body h3{
-    font-weight:600;
-    margin-bottom:15px;
-}
-
-.card-body p{
-    color:#666;
-}
-
-.card-body h4{
-    margin:20px 0;
-    font-weight:bold;
-}
-
-.card .btn{
-    border-radius:30px;
-    padding:10px 25px;
-}
-
-/* ===========================
-   Why Choose Us
-=========================== */
-
-.bg-light{
-    background:#eefaf1!important;
-}
-
-.bi{
-    transition:.3s;
-}
-
-.bi:hover{
-    transform:scale(1.2);
-}
-
-#why h4{
-    margin-top:15px;
-    font-weight:600;
-}
-
-#why p{
-    color:#666;
-}
-
-/* ===========================
-   Order Forms
-=========================== */
-
-#order{
-    padding:80px 0;
     background:white;
 }
 
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.20);
+
+}
+
+.card img{
+
+    height:280px;
+    width:100%;
+
+    object-fit:cover;
+
+}
+
+.card-body{
+
+    padding:30px;
+    text-align:center;
+
+}
+
+.card-body h3{
+
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:15px;
+
+}
+
+.card-body p{
+
+    color:#666;
+    font-size:16px;
+    line-height:28px;
+
+}
+
+.card-body h4{
+
+    color:#198754;
+
+    font-size:28px;
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+.card .btn{
+
+    border-radius:30px;
+
+    padding:12px 30px;
+
+    font-size:17px;
+    font-weight:600;
+
+}
+
+/* ==========================================
+   WHY CHOOSE US
+========================================== */
+
+.bg-light{
+
+    background:#eefaf2!important;
+
+}
+
+.bg-light h2{
+
+    font-size:42px;
+    text-align:center;
+    color:#198754;
+    font-weight:700;
+
+    margin-bottom:60px;
+
+}
+
+.bi{
+
+    font-size:60px;
+
+    transition:.4s;
+
+}
+
+.bi:hover{
+
+    transform:scale(1.2);
+
+}
+
+.bg-light h4{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.bg-light p{
+
+    color:#666;
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+/* Feature Cards */
+
+.bg-light .col-md-3{
+
+    transition:.3s;
+
+}
+
+.bg-light .col-md-3:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+   COMMON SECTION SPACING
+========================================== */
+
+section{
+
+    padding-top:90px;
+    padding-bottom:90px;
+
+}
+/* ==========================================
+   ORDER SECTION
+========================================== */
+
+#order{
+    background:#ffffff;
+    padding:90px 0;
+}
+
+#order h2{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#198754;
+    margin-bottom:60px;
+}
+
 #order .card{
+    border:none;
     border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    overflow:hidden;
+}
+
+#order .card-body{
+    padding:35px;
+}
+
+.form-label{
+    font-weight:600;
+    color:#333;
 }
 
 .form-control{
+    height:50px;
     border-radius:10px;
-    padding:12px;
+    border:1px solid #ddd;
+    transition:.3s;
+}
+
+textarea.form-control{
+    height:120px;
+    resize:none;
 }
 
 .form-control:focus{
     border-color:#198754;
-    box-shadow:0 0 10px rgba(25,135,84,.25);
+    box-shadow:0 0 12px rgba(25,135,84,.25);
 }
 
-button{
-    border-radius:30px!important;
-    padding:12px!important;
-    font-size:18px!important;
-    transition:.3s!important;
-}
-
-button:hover{
-    transform:translateY(-2px);
-}
-
-/* ===========================
-   Customer Reviews
-=========================== */
-
-.review-card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+.btn-success,
+.btn-primary{
+    border-radius:30px;
+    padding:12px;
+    font-size:17px;
+    font-weight:600;
     transition:.3s;
 }
 
+.btn-success:hover,
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   CUSTOMER REVIEWS
+========================================== */
+
+.review-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+    transition:.3s;
+    height:100%;
+}
+
 .review-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .review-card h5{
     color:#ffc107;
+    font-size:24px;
 }
 
-/* ===========================
-   Contact
-=========================== */
+.review-card p{
+    color:#666;
+    line-height:28px;
+    margin:20px 0;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
 
 #contact{
+    background:#eefaf2;
     padding:80px 0;
-    background:#f8f9fa;
+}
+
+#contact h2{
+    color:#198754;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:30px;
 }
 
 #contact p{
     font-size:18px;
-    margin:10px 0;
+    color:#444;
+    margin-bottom:15px;
 }
 
-/* ===========================
-   Footer
-=========================== */
+/* ==========================================
+   FOOTER
+========================================== */
 
 footer{
     background:#111;
-    color:white;
-    padding:40px 0;
+    color:#fff;
+    text-align:center;
+    padding:45px 20px;
 }
 
 footer h4{
+    font-size:28px;
     margin-bottom:15px;
-    font-weight:700;
 }
 
 footer p{
-    margin:5px 0;
+    color:#ccc;
+    margin-bottom:8px;
 }
 
 footer small{
-    color:#bbb;
+    color:#999;
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* ==========================================
+   BUTTON ANIMATION
+========================================== */
 
-@media(max-width:992px){
-
-.hero h1{
-    font-size:3rem;
+.btn{
+    transition:.3s;
 }
 
-.hero p{
-    font-size:1.1rem;
+.btn:hover{
+    transform:translateY(-3px);
 }
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 
-.card img{
-    height:220px;
-}
+/* Laptop */
+@media (max-width:1200px){
 
-}
+    .hero h1{
+        font-size:52px;
+    }
 
-@media(max-width:768px){
+    .hero p{
+        font-size:20px;
+    }
 
-.hero{
-    height:80vh;
-}
-
-.hero h1{
-    font-size:2.3rem;
-}
-
-.hero p{
-    font-size:1rem;
-}
-
-.logo{
-    width:50px;
-    height:50px;
-}
-
-.navbar-brand{
-    font-size:1rem;
-}
-
-.card img{
-    height:200px;
-}
-
-section{
-    padding:60px 0;
-}
+    .card img{
+        height:240px;
+    }
 
 }
 
-@media(max-width:576px){
+/* Tablet */
+@media (max-width:992px){
 
-.hero h1{
-    font-size:2rem;
+    .navbar-brand{
+        font-size:22px;
+    }
+
+    .logo{
+        width:50px;
+        height:50px;
+    }
+
+    .hero{
+        height:85vh;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .hero .btn{
+        margin:8px;
+        padding:12px 28px;
+    }
+
+    #products h2,
+    #order h2,
+    #contact h2,
+    .bg-light h2{
+        font-size:34px;
+    }
+
+    .card img{
+        height:220px;
+    }
+
 }
 
-.hero p{
-    font-size:.95rem;
+/* Mobile */
+@media (max-width:768px){
+
+    .navbar{
+        padding:10px;
+    }
+
+    .navbar-brand{
+        font-size:20px;
+    }
+
+    .logo{
+        width:45px;
+        height:45px;
+    }
+
+    .hero{
+        height:75vh;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+        padding:0 15px;
+    }
+
+    .hero .btn{
+        display:block;
+        width:220px;
+        margin:10px auto;
+    }
+
+    .card{
+        margin-bottom:25px;
+    }
+
+    .card img{
+        height:200px;
+    }
+
+    .card-body{
+        padding:20px;
+    }
+
+    #products,
+    #order,
+    #contact{
+        padding:60px 0;
+    }
+
 }
 
-.hero .btn{
-    display:block;
-    width:100%;
-    margin:10px auto;
+/* Small Mobile */
+@media (max-width:576px){
+
+    .hero{
+        height:70vh;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .navbar-brand{
+        font-size:18px;
+    }
+
+    .logo{
+        width:40px;
+        height:40px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+    footer h4{
+        font-size:22px;
+    }
+
+    footer p{
+        font-size:14px;
+    }
+
 }
 
-.card img{
-    height:180px;
+/* ==========================================
+   SMOOTH ANIMATIONS
+========================================== */
+
+.card,
+.review-card,
+.btn,
+.nav-link{
+    transition:all .3s ease;
 }
 
-h2{
-    font-size:2rem!important;
-}
-
+html{
+    scroll-behavior:smooth;
 }
