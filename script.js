@@ -1,50 +1,71 @@
-document.getElementById('milkOrderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
 
-    const name = document.getElementById('milk-name').value;
-    const quantity = document.getElementById('milk-quantity').value;
-    const address = document.getElementById('milk-address').value;
+    // ===================== MILK ORDER =====================
 
-    // WhatsApp message content for milk order
-    const message = `Hello, I want to order ${quantity} liters of milk. 
-    \nName: ${name} 
-    \nDelivery Address: ${address}`;
+    const milkForm = document.getElementById("milkOrderForm");
 
-    // Your WhatsApp number
-    const phoneNumber = "9121556689"; 
+    if (milkForm) {
+        milkForm.addEventListener("submit", function (event) {
 
-    // Encode the message to be URL-safe
-    const encodedMessage = encodeURIComponent(message);
+            event.preventDefault();
 
-    // Create WhatsApp link
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            const name = document.getElementById("milk-name").value.trim();
+            const quantity = document.getElementById("milk-quantity").value;
+            const address = document.getElementById("milk-address").value.trim();
 
-    // Open WhatsApp
-    window.open(whatsappLink, "_blank");
-});
+            const phoneNumber = "919121556689";
 
+            const message =
+`🥛 *Satya Ganga Dairy Milk Order*
 
-document.getElementById('curdOrderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+Customer Name: ${name}
 
-    const name = document.getElementById('curd-name').value;
-    const quantity = document.getElementById('curd-quantity').value;
-    const address = document.getElementById('curd-address').value;
+Quantity: ${quantity} Litres
 
-    // WhatsApp message content for curd order
-    const message = `Hello, I want to order ${quantity} kgs of curd. 
-    \nName: ${name} 
-    \nDelivery Address: ${address}`;
+Delivery Address:
+${address}`;
 
-    // Your WhatsApp number
-    const phoneNumber = "9121556689"; 
+            window.open(
+                `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+                "_blank"
+            );
 
-    // Encode the message to be URL-safe
-    const encodedMessage = encodeURIComponent(message);
+            milkForm.reset();
+        });
+    }
 
-    // Create WhatsApp link
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    // ===================== CURD ORDER =====================
 
-    // Open WhatsApp
-    window.open(whatsappLink, "_blank");
+    const curdForm = document.getElementById("curdOrderForm");
+
+    if (curdForm) {
+        curdForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById("curd-name").value.trim();
+            const quantity = document.getElementById("curd-quantity").value;
+            const address = document.getElementById("curd-address").value.trim();
+
+            const phoneNumber = "919121556689";
+
+            const message =
+`🥣 *Satya Ganga Dairy Pot Curd Order*
+
+Customer Name: ${name}
+
+Quantity: ${quantity} Kg
+
+Delivery Address:
+${address}`;
+
+            window.open(
+                `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
+                "_blank"
+            );
+
+            curdForm.reset();
+        });
+    }
+
 });
